@@ -13,10 +13,10 @@ submit.addEventListener("click",function(e){
     delbtn.innerText = "delete";
     li.appendChild(delbtn);
 });
-for(del of delclass){
-    del.addEventListener("click",function(e){
-        let par = this.parentElement;
-        console.log(par);
+list.addEventListener("click",function(e){
+    if(e.target.nodeName == "BUTTON"){
+        let par = e.target.parentElement;
         par.remove();
-    });
-}
+    }
+
+})
